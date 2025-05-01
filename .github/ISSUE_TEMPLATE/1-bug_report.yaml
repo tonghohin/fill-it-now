@@ -1,0 +1,34 @@
+name: Bug report
+description: Report an issue
+title: "[bug]: "
+labels: bug
+body:
+    - type: textarea
+      id: bug-description
+      attributes:
+          label: Describe the bug
+          description: A clear and concise description of what the bug is.
+          placeholder: Bug description
+      validations:
+          required: true
+
+    - type: input
+      id: job-link
+      attributes:
+          label: Job application link
+          description: Please paste the full URL of the job application form where you encountered the issue.
+          placeholder: https://example.com/job-application
+      validations:
+          required: true
+
+    - type: textarea
+      id: fields-not-working
+      attributes:
+          label: Fields that did not autofill
+          description: List the specific fields that were not autofilled or did not work as expected (e.g., "LinkedIn", "Phone Number", etc.).
+          placeholder: |
+              - LinkedIn
+              - Phone Number
+              - Address
+      validations:
+          required: true
