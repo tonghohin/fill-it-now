@@ -36,6 +36,8 @@ function autofillForm(profile) {
 chrome.runtime.onMessage.addListener((message) => {
     if (message.action === "autofill") {
         const wasFormFilled = autofillForm(message.data);
-        chrome.runtime.sendMessage({ action: "formFilled" });
+        if (wasFormFilled) {
+            chrome.runtime.sendMessage({ action: "formFilled" });
+        }
     }
 });
